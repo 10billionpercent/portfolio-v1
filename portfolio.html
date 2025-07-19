@@ -1,0 +1,919 @@
+<!DOCTYPE html>
+<meta charset="UTF-8">
+<html>
+    <title>UI/UX Portfolio ✦ Sukito </title>
+<head>
+  <link rel="icon" href="favicons 40/1.png" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Shantell+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<style>
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* For WebKit browsers like Chrome, Edge, and Safari */
+body::-webkit-scrollbar {
+  width: 10px; /* scrollbar width */
+}
+
+body::-webkit-scrollbar-track {
+  background: #00212d; /* track color */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #00baff; /* thumb color */
+  border-radius: 6px;
+  border: 2px solid #00212d; /* space around the thumb */
+}
+
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: url(background3.jpg) no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
+   scroll-behavior: smooth;
+  
+}
+  
+  
+        h1 {
+              font-family: 'Shantell Sans';
+              color: #A9E8FF;
+              text-align: center;
+              font-size: 28px;
+  cursor: default;
+
+
+            }
+            .navbar {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 16px 32px;
+                box-shadow: inset 0 -8px 8px -10px #45CDFF;
+                overflow: hidden;
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 10px;
+                border-bottom-left-radius: 10px;
+                backdrop-filter: blur(10px);
+                gap:auto;
+                position: sticky;
+top: 0;
+z-index: 999;
+              }
+
+.nav-links {
+  display: flex;
+  flex: 1;
+  justify-content: center; /* center all nav items */
+  list-style: none;
+  gap: 120px; /* even spacing */
+  padding: 16px;
+  margin: 0;
+  align-items: center;
+}
+
+
+              
+.nav-links li {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.nav-links a {
+  color: #A9E8FF;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: 'Inter';
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background-color: transparent;
+}
+.nav-links a:hover {
+  box-shadow: 0 0 8px #00baff, 0 0 16px #00baff;
+  background-color: rgba(0, 186, 255, 0.08); /* soft, almost invisible */
+  backdrop-filter: blur(4px);
+}
+
+
+.contents {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 32px;
+}
+.glass-window {
+                display: flex;
+                flex-direction: column;
+                padding: 16px 8px;
+                box-shadow: inset 0 -8px 8px -10px #A9E8FF;
+                width: 100%;
+                height: auto;
+                backdrop-filter: blur(16px);
+                gap: 16px;
+                transition: transform 0.5s ease-in-out;
+                border-radius: 8px;
+                 align-items: center;
+              }
+
+              .glass-window:hover {
+                transform: translateY(-8px);
+              }  
+
+.website {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+   align-items: center;
+   max-width: 100%;
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  margin-right: 8px;
+}
+
+.nav-btn {
+border-radius: 64px;
+width: 64px;
+height: 64px;
+background-color: #45CDFF;
+border:#00212D 1px solid;
+box-shadow: 0 0 8px #45CDFF;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.photo-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+   align-items: center;
+}
+
+.ss {
+  width:100%;
+  height: 100%;
+  border-radius: 8px;
+    transition: transform 0.5s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.ss:hover {
+                transform: translateY(-8px);
+              }  
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.cta {
+    background: #00BAFF;
+font-size: 16px;
+color: #00212D;
+padding: 8px 16px;
+display: flex;
+flex-direction: row;
+gap: 8px;
+border-radius: 12px;
+border: 1px solid #A9E8FF;
+transition: box-shadow 0.2s ease, 
+background-color 0.2s ease,  
+transform 0.1s ease;
+font-family: 'Inter';
+}
+
+
+.cta:hover {
+  box-shadow: 0 0 16px #A9E8FF;
+}
+
+.cta:active {
+    transform: scale(0.9); 
+}
+
+.nav-btn:hover {
+  box-shadow: 0 0 8px #45CDFF, 0 0 16px #A9E8FF;
+}
+
+.nav-btn:active {
+    transform: scale(0.9); 
+}
+
+.body-text {
+  font-family: 'Inter';
+  color: #A9E8FF;
+  font-size: 16px;
+  align-self: center;
+  padding: 0 8px;
+}
+
+.body-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+  padding: 0 0 0 0;
+}
+
+.glow {
+  color: #A9E8FF; /* or your chosen accent */
+  text-shadow: 0 0 6px #00a2ff, 0 0 18px #00a2ff;
+    cursor: default;
+}
+
+.glow:hover {
+  text-shadow: 0 0 10px #00a2ff, 0 0 20px #00a2ff, 0 0 40px #00a2ff;
+  transition: text-shadow 0.3s ease;
+  cursor: default;
+}
+
+.img-desc {
+  font-family: 'Inter';
+  color: #A9E8FF;
+  font-size: 18px;
+transition: all 0.5s ease;
+  background-color: transparent;
+  border-radius: 12px;
+   padding: 8px 16px;
+     backdrop-filter: blur(4px);
+
+}
+.img-desc:hover {
+  box-shadow: 0 0 8px #00baff, 0 0 16px #00baff;
+  background-color: transparent; /* soft, almost invisible */
+  backdrop-filter: blur(4px);
+}
+
+.section-heading {
+    background-color: transparent;
+  border-radius: 12px;
+   padding: 8px 16px;
+     backdrop-filter: blur(4px);
+     font-family: 'Shantell Sans';
+              color: #A9E8FF;
+              text-align: center;
+              font-size: 24px;
+  cursor: default;
+  transition: all 0.5s ease-in-out;
+
+}
+
+.section-heading:hover {
+  box-shadow: 0 0 8px #00baff, 0 0 16px #00baff;
+  background-color: transparent; /* soft, almost invisible */
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00212D;
+  transition: 0.3s;
+  border-radius: 30px;
+  box-shadow: 0 0 4px 4px #A9E8FF;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 24px;
+  width: 24px;
+  left: 3px;
+  bottom: 3px;
+  background-color: #00BAFF;
+  transition: 0.3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #00baff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(30px);
+    background-color: #00212D;
+}
+
+#hero-section, #old-website, #new-website, #comparison, #case-study, #tech-used, #thank-you {
+  scroll-margin-top: 96px;
+}
+
+.case-ss {
+  width:50%;
+  height: auto;
+  border-radius: 8px;
+    transition: transform 0.5s ease-in-out, opacity 0.2s ease-in-out;
+}
+
+.tech-ss {
+  width:160px;
+  height: auto;
+  padding: 0 0 0 0;
+}
+
+/* Modal container */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 33, 45, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  backdrop-filter: blur(2px);
+}
+
+/* Modal box */
+.modal-content {
+  background: #001016;
+  padding: 2rem;
+  border-radius: 1rem;
+  position: relative;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  box-shadow: inset 0 -8px 8px -10px #A9E8FF,  inset 0 8px 8px -10px #A9E8FF, 0 0 12px rgba(0, 186, 255, 0.2);
+  width: 600px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+/* Animate in */
+.modal.show .modal-content {
+  transform: scale(1);
+  opacity: 1;
+}
+
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #A9E8FF
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 12px;
+  row-gap: 8px;
+}
+
+/* Image */
+.about-img {
+  grid-column: 1;
+  grid-row: 1;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+}
+
+/* Top-right text */
+.line1 {
+  grid-column: 2;
+  grid-row: 1;
+  margin: 0;
+}
+
+/* Bottom text that spans full width */
+.line2 {
+  grid-column: 1 / span 2;  /* SPAN BOTH COLUMNS */
+  grid-row: 2;
+  margin: 0;
+}
+
+.modal-cta {
+    background: transparent;
+font-size: 20px;
+color: #A9E8FF;
+padding: 16px;
+display: flex;
+flex-direction: row;
+gap: 8px;
+border-radius: 12px;
+height:40px;
+border: 1px solid #A9E8FF;
+transition: box-shadow 0.2s ease, 
+background-color 0.2s ease,  
+transform 0.1s ease;
+width: auto;
+font-family: 'Inter';
+align-items: center;
+  text-decoration: none;
+}
+
+
+.modal-cta:hover {
+  box-shadow: 0 0 16px #A9E8FF;
+}
+
+.modal-cta:active {
+    transform: scale(0.9); 
+}
+
+a {
+  text-decoration: none;
+}
+
+.modal-icons {
+  width: 28px;
+  height: 28px;
+}
+
+#scroll-top-btn {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+#scroll-top-btn.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.scroll-text {
+  font-style: italic;
+  font-size: 0.85rem;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+  font-family: 'Inter';
+  color:#A9E8FF;
+}
+.scroll-text:hover {
+  opacity: 1;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+</style>
+
+
+  </head>
+    <body>
+            <nav class="navbar"> 
+            <ul class="nav-links">
+                <li><a href="https://sukito.onrender.com/old" target="_blank">Old Website (Streamscout)</a></li>
+                <li><a href="https://sukito.onrender.com/new" target="_blank">New Website (Sukito)</a></li>
+                <li><a   href="Shreya-V-Resume.pdf" target="_blank">My Resume</a></li>
+              <li id="about-link"><a href="#about-modal">About Me</a></li>
+              <li> <a href="#hero-section"> Back to Top </a></li>
+
+            </ul>
+          </nav>
+       <div class="contents">
+        <div class="glass-window" id="hero-section">
+          <h1 class="section-heading" style="font-size: 32px;"><span class="glow">— ✦ </span>From Automation to Aesthetics <span class="glow">✦ —</span></h1>
+          <div class="body-wrapper">
+          <p class="body-text"> Originally built as a functional UI for a UiPath RPA backend, Sukito (formerly Streamscout) started out... clunky.
+Navigation was awkward. <br> The UX didn’t reflect the thought I put into the logic behind it. So I tore it down and redesigned it from scratch — not just to make it prettier,<br>
+but to learn what good UI/UX really feels like — and to build something I'm proud to showcase.</p>
+</div>
+          <div class="buttons" style ="flex-direction: row;">
+            <button  onclick="document.getElementById('old-website').scrollIntoView({ behavior: 'smooth' })"class="cta"> Scroll to Explore </button>
+            <button class="cta" onclick="window.open('https://sukito.onrender.com/new', '_blank')"> Try Sukito </button>
+          </div>
+        </div>
+        <div class="website" id="old-website" style="flex-direction: column;">
+        <h1 class="section-heading"><span class="glow"> ✦ </span>Old Website (Streamscout)</h1>
+         <div style=" display: flex; flex-direction: row; gap:8px;">
+           <div class="carousel">
+            <button class="nav-btn" style="display: none;" id="old-prev"> <img src="prev.svg"></button>
+            <div class="photo-desc">
+            <p class="img-desc" id="old-desc"> Streamscout Input Page</p>
+            <img class="ss" src="streamscout_in.png" id="old-image">
+            </div>
+            <button class="nav-btn" id="old-next"> <img src="next.svg"></button>
+          </div>
+          <div class="glass-window"> 
+                       <p class="body-text"> Streamscout Anime Finder is a minimalist, utility-focused web tool originally designed to 
+                        integrate seamlessly with a UiPath RPA backend. The interface intentionally avoids aesthetic embellishments in 
+                        favor of raw functionality. Text-based input fields were used instead of buttons, as they’re simpler for RPA bots
+                         to interpret. The overall layout is basic and prioritizes automation compatibility over design, with no 
+                         stylistic elements or animations. It serves purely as a backend-friendly interface, not a visual experience.</p>
+                       <div class="buttons" style="margin-bottom: 0;">
+           <button class="cta" onclick="window.open('https://sukito.onrender.com/old', '_blank')">Try it Yourself</button>
+            <button class="cta" onclick="document.getElementById('new-website').scrollIntoView({ behavior: 'smooth' })"> See My Redesign </button>
+            <button class="cta" onclick="document.getElementById('comparison').scrollIntoView({ behavior: 'smooth' })"> Overview of the Changes </button>
+            <button class="cta" onclick="document.getElementById('case-study').scrollIntoView({ behavior: 'smooth' })"> View Case Study </button>
+          </div>
+
+          </div>
+         </div>
+        </div>
+         <div class="website" id="new-website" style="flex-direction: column;">
+        <h1 class="section-heading"><span class="glow"> ✦ </span>New Website (Sukito)</h1>
+         <div style=" display: flex; flex-direction: row; gap:8px;">
+           <div class="carousel">
+            <button class="nav-btn"style="display:none;"id="new-prev"> <img src="prev.svg"></button>
+            <div class="photo-desc">
+            <p class="img-desc" id="new-desc"> Sukito Input Page</p>
+            <img class="ss" src="sukito_in.png" id="new-image">
+            </div>
+            <button class="nav-btn" id="new-next"> <img src="next.svg"></button>
+          </div>
+          <div class="glass-window"> 
+                       <p class="body-text"> Sukito is a modern, design-driven reimagining of the original Streamscout platform.
+                         While the backend was rewritten entirely in Flask for performance and flexibility, the key shift lies in the frontend — 
+                         rebuilt from scratch with a user-first mindset. Sukito swaps the utilitarian layout for a Bento-inspired interface that 
+                         emphasizes visual clarity, UX accessibility, and interaction flow. It trades Streamscout’s raw automation focus for a smoother, 
+                         more guided user experience, without sacrificing backend efficiency. Though still lightweight and minimal, Sukito is no longer 
+                         just functional — it's thoughtfully designed.</p>
+                       <div class="buttons" style="margin-bottom: 0;">
+           <button class="cta" onclick="window.open('https://sukito.onrender.com/new', '_blank')">Try it Yourself</button>
+            <button class="cta" onclick="window.open('https://www.figma.com/proto/PEpoqxmDjRRwkMPlRGhq48/Anime-site-redesign?page-id=0%3A1&node-id=57-293&m=dev&scaling=scale-down&content-scaling=fixed&starting-point-node-id=57%3A293&show-proto-sidebar=1&t=JRbnEcqpdZ64Yr8x-1', '_blank')"> Figma Prototype </button>
+            <button class="cta" onclick="document.getElementById('comparison').scrollIntoView({ behavior: 'smooth' })"> Overview of the Changes </button>
+            <button class="cta" onclick="document.getElementById('case-study').scrollIntoView({ behavior: 'smooth' })"> View Case Study </button>
+          </div>
+
+          </div>
+         </div>
+        </div>
+        <div class="website" id="comparison" style="flex-direction: column;">
+          <h1 class="section-heading"><span class="glow"> ✦ </span>What Changed?</h1>
+          <div id="states" style="display:flex; flex-direction: row; gap: 32px; align-items: center;">
+            <p class="body-text" id="ip-state" style=" padding: 8px 16px;
+    box-shadow: 0 0 8px #00baff, 0 0 16px #00baff;
+    background-color: transparent;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    font-size: 18px;
+    backdrop-filter: blur(8px);"> Input </p>
+            <label class="switch">
+  <input type="checkbox" id="toggleSwitch">
+  <span class="slider"></span>
+</label>
+<p class="body-text" id="op-state" style="transition: all 0.5s ease; font-size: 18px;backdrop-filter: blur(8px);"> Output </p>
+          </div>
+        <div class="website">
+          <div class="glass-window" id="old-comparison">
+          <h1 class="section-heading" style="font-size: 18px;">Old Website (Streamscout)</h1>
+          <img class="ss" src="streamscout_in.png" id="streamscout-img">
+           <h1 class="section-heading" style="font-size: 18px;">Problems with Streamscout</h1>
+           <div class="body-wrapper" id="problems">
+        </div>
+        </div>
+        <div class="glass-window" id="new-comparison">
+          <h1 class="section-heading" style="font-size: 18px;">New Website (Sukito)</h1>
+          <img class="ss" src="sukito_in.png" id="sukito-img">
+          <h1 class="section-heading" style="font-size: 18px;">How Sukito Solves these Problems</h1>
+           <div class="body-wrapper" id="solutions">
+        </div>
+        </div>
+        </div>  
+        </div>
+        <div class="glass-window" id="case-study"> 
+ <h1 class="section-heading"><span class="glow"> ✦ </span>Case Study</h1>
+                        <h1 class="section-heading" style="font-size: 18px;">Why Bento?</h1>
+                      <p class="body-text"> I chose the bento layout because of its structured, compartmentalized design—each item in a bento box has its own dedicated space, <br>which makes the overall experience clean, organized, and easy to navigate. That concept aligned perfectly with the goal of simplifying <br>and visually segmenting the various UI elements in my redesign. Since the project was anime-themed, incorporating a Japanese layout<br>  felt both meaningful and fun. That’s when the idea of presenting it as an “anime bento” came to me—a playful metaphor that ties together <br>the structured UI with the cultural roots of anime.
+</p>
+          <div class="website" style="flex-direction: column; gap:16px;">
+            <h1 class="section-heading" style="font-size: 18px;"> Header </h1>
+            <div style="display: flex; flex-direction: row; align-items: center; gap:16px;" >
+              <img class="case-ss" src="./case_study/header.png">
+              <p class="body-text">For the header, I wanted a simple yet meaningful logo that could represent the idea of a “bento” without explicitly referencing food. The focus was more on structure and organization. I added a magnifying glass icon to subtly convey the concept of “searching,” which is central to the platform’s purpose. To complete the identity, I used AI tools to generate a fitting name and tagline that would capture the essence of the project while keeping it memorable and on-theme.</p>
+              </div>
+              <div style="display: flex; flex-direction: row; align-items: center; gap:16px;" >
+              <img class="case-ss" src="./case_study/bento tooltip.png" style="height:300px; width: auto;">
+              <p class="body-text">Since not everyone may be familiar with the term "bento" in a design context, I decided to include a <br> subtle tooltip near the header. When users hover in that area, the tooltip briefly explains what a bento is<br>—highlighting its structured, compartmentalized nature. This small detail ensures clarity for new users <br>without disrupting the overall flow or layout.</p>
+              </div>
+          </div>
+           <div class="website" style="flex-direction: column;">
+              <h1 class="section-heading" style="font-size: 18px;"> Usability </h1>
+              <div style="display: flex; flex-direction: row; align-items: center; gap:16px;" >
+              <img class="case-ss" src="./case_study/feedback.png" style="height:300px; width: auto;">
+              <p class="body-text">For the genre, type, and status inputs, I designed interactive pill-style buttons that respond to user actions. <br> On hover, each pill glows in its respective accent color, providing immediate visual feedback. When clicked, <br>the pill adopts a distinct active state—helping users easily identify which options they've selected. This not only <br>enhances usability, but also acts like a visual “cart,” allowing users to quickly see all their applied filters <br>in one place.</p>
+              </div>
+               <div style="display: flex; flex-direction: row; align-items: center; gap:16px;">
+                <img class="case-ss" src="./case_study/helper text.png" style="height:300px; width: auto;">
+                <p class="body-text"> For filters like "status" and "type", I also added subtle helper text beneath the heading. These filters often contain<br> terms that might not be immediately clear to all users, so the helper text offers quick, non-intrusive guidance—<br>making the interface more beginner-friendly without cluttering the layout.
+</p>
+                </div>
+                   <div style="display: flex; flex-direction: row; align-items: center; gap:16px; padding-left: 8px;" >
+              <img class="case-ss" src="./case_study/filters.png" style="height:250px; width: auto;">
+              <p class="body-text"> On the output page, the leftmost panel displays all the filters the user had selected. This removes the need to second-<br>guess what was chosen earlier. To strengthen the visual connection, the panel reuses the same color scheme <br>as the input filters — for example, year and genre appear in blue, status in green, and type in purple — <br>making it easy for users to instantly recognize and relate their previous choices to the current results.
+</p>
+              </div>
+          </div>
+           
+           <div class="website" style="flex-direction: column;">
+            <h1 class="section-heading" style="font-size: 18px;"> Error Handling </h1>
+            <div style="display: flex; flex-direction: row; align-items: center; gap:16px; padding-left: 8px;" >
+               <div style="display: flex; flex-direction: column; align-items: center; gap:16px;" >
+              <img class="case-ss" src="./case_study/error1.png">
+                <img class="case-ss" src="./case_study/error2.png">
+                </div>
+                <img class="case-ss" src="./case_study/error3.png" style="width: 20%; height: auto;">
+                <p class="body-text"> Edge cases—such as clicking “Previous” on the first result or “Next” on the last—are handled gracefully using <br> attention-grabbing, non-intrusive popups instead of default browser alerts, which tend to interrupt user flow. <br>Similarly, when no matches are found, a clearly visible popup is shown within the input page itself, allowing <br>users to adjust their filters and try again immediately. This approach minimizes friction and maintains a<br> smooth, uninterrupted experience.
+</p>
+          </div>
+          
+          </div>
+          </div>
+          <div class="glass-window" id="tech-used"> 
+                      <h1 class="section-heading"><span class="glow"> ✦ </span>Tools & Tech Stack</h1>
+                       <div style="display: flex; flex-direction: row; align-items: center; gap:64px;" >
+           <div style="display: flex; flex-direction: column; align-items: center; gap:4px;" >
+              <img class="tech-ss" src="./design_logos/1.png">
+              <p class="body-text"> Figma </p>
+              <p class="body-text" style="padding: 0 0 0 0;"> UI layout planning and early-stage wireframing </p>
+                </div>
+           <div style="display: flex; flex-direction: column; align-items: center;  gap:4px;" >
+              <img class="tech-ss" src="./design_logos/2.png">
+               <p class="body-text" > Canva </p>
+               <p class="body-text"  style="padding: 0 0 0 0;"> Icon design and visual assets </p>
+                </div>
+               <div style="display: flex; flex-direction: column; align-items: center; gap:4px;" >
+              <img class="tech-ss" src="./design_logos/3.png">
+               <p class="body-text"> ChatGPT </p>
+               <p class="body-text"  style="padding: 0 0 0 0;"> Technical troubleshooting, UX copywriting <br> help, and feature ideation </p>
+                </div>
+          </div>
+          <div style="display: flex; flex-direction: row; align-items: center; gap:64px;" >
+           <div style="display: flex; flex-direction: column; align-items: center;  gap:4px;" >
+              <img class="tech-ss" src="./tech_logos/1.png" style="  width:120px;">
+               <p class="body-text"> HTML </p>
+               <p class="body-text"  style="padding: 0 0 0 0;"> Structuring the page content and components semantically</p>
+                </div>
+           <div style="display: flex; flex-direction: column; align-items: center;  gap:4px;" >
+              <img class="tech-ss" src="./tech_logos/2.png" style="  width:120px;">
+               <p class="body-text"> CSS </p>
+               <p class="body-text"  style="padding: 0 0 0 0;"> Defining the visual style—colors, spacing, typography, and UI details </p>
+                </div>
+           <div style="display: flex; flex-direction: column; align-items: center;  gap:4px;" >
+              <img class="tech-ss" src="./tech_logos/3.png" style="  width:120px;">
+               <p class="body-text"> JavaScript</p>
+               <p class="body-text"  style="padding: 0 0 0 0;"> Handling interactivity, animations, and dynamic DOM updates </p>
+                </div>
+           <div style="display: flex; flex-direction: column; align-items: center;  gap:4px;" >
+              <img class="tech-ss" src="./tech_logos/4.png" style="  width:120px;">
+               <p class="body-text"> Flask </p>
+               <p class="body-text"  style="padding: 0 0 0 0;"> Serving pages, handling routing logic, processing filters, and making the API call </p>
+                </div>
+          </div>
+            <h1 class="section-heading" style="font-size: 18px;"> Future Improvements </h1>
+           <p class="body-text">Planned enhancements include making the platform fully responsive across all devices and screen sizes. <br> I also aim to let users save their anime recommendations—either by downloading them as a PDF, <br>sending via email, or storing them in a personal account.</p>
+          </div>
+        </div> 
+<div class="glass-window" id="thank-you" style="border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 0;
+                border-bottom-left-radius: 0;
+                width: 100%;
+                margin: 0 0 0 0;
+                padding: 0 0 0 0;"> 
+                      <h1 class="section-heading"><span class="glow">— ✦ </span>Thank you for taking the time to explore this journey.
+Sukito wasn’t just built — <br> it was designed step by step, with intent and clarity.<span class="glow"> ✦ —</span></h1>
+              <button  onclick="window.open('https://www.linkedin.com/in/shreya-v3012', target='_blank')" class="modal-cta" style="margin-bottom: 32px;"> <img  class="modal-icons" src="./modal_logos/4.png"> Connect with Me on LinkedIn </button>
+          </div>
+<div id="about-modal" class="modal">
+  <div class="modal-content">
+        <h1 class="section-heading"><span class="glow">— ✦ </span>About Me<span class="glow"> ✦ —</span></h1>
+    <span class="close-btn">&times;</span>
+<div class="about-grid">
+    <img src="logo-final.png" alt="Logo" class="about-img" />
+    <p class="body-text line1"> Hi, I’m Shreya — a UI/UX designer and frontend developer.
+I design with intent, always asking - "What would I want as a user? and "How can I build this simply yet effectively as a developer?" </p>
+ <p class="body-text line2">The paint splash in my logo reflects my artistic roots, while the “S” marks my personal identity — a balance of logic, creativity, and intent. </p>
+  </div>
+  <div class="buttons">
+  <div class="buttons" style ="flex-direction: row;">
+            <button  onclick="window.open('https://dribbble.com/shreya-v', target='_blank')"class="modal-cta"> <img  class="modal-icons" src="./modal_logos/2.png">Dribbble </button>
+            <button onclick="window.open('https://github.com/10billionpercent', target='_blank')"class="modal-cta"> <img  class="modal-icons" src="./modal_logos/1.png">GitHub </button>
+          </div>
+          <a 
+  href="Shreya-V-Resume.pdf" 
+  download class="modal-cta"> <img  class="modal-icons" src="./modal_logos/3.png"> Download Resume
+</a>
+  </div>
+
+  </div>
+</div>
+</body>
+<script>
+  const toggle = document.getElementById('toggleSwitch');
+  const input = document.getElementById('ip-state');
+  const output = document.getElementById('op-state');
+  const newNext = document.getElementById('new-next');
+const newDesc = document.getElementById('new-desc');
+const inProblems = [`✦ Text-based inputs make the experience prone to user errors like typos or invalid values, especially since there's no input validation.`,
+`✦ Reference info (e.g., valid genres, types, statuses) is placed far from their corresponding input fields, creating unnecessary friction and confusion.`,
+`✦ No contextual guidance is provided—filters like “status” and “type” use unexplained terms or abbreviations, which can confuse new users.`,
+`✦ There’s no defined color scheme, styling is minimal, and the layout feels utilitarian rather than intuitive.`,
+`✦ Fields look identical regardless of focus or errors, making the interface feel unresponsive and outdated.`];
+
+
+
+const outProblems =[`✦ The page does not display which filters were applied, leaving users confused about the search context.`,
+`✦ There’s no indication of how many results were returned, making it hard to gauge the results at a glance.`,
+`✦ Users can't return to the input page naturally — they must rely on the browser's back button.`,
+`✦ The layout is extremely plain, lacking styling, visual structure, hierarchy or modern UI elements.`,
+`✦ Clicking “Next” on the last result or “Previous” on the first one triggers a raw browser alert(), which interrupts flow and requires manual dismissal.`];
+
+
+const inSolutions =[`✦ Predefined button inputs eliminate the chance of typos or invalid entries, ensuring clean data every time.`,
+`✦ Buttons double as reference info, clearly displaying all valid options right where the user needs them. `,
+`✦ Helper text is added beneath non-straightfoward filters (like status or type), guiding users unfamiliar with the terms.`,
+`✦ A cohesive color palette with distinct but related hues makes the UI visually pleasant and easy to navigate. `,
+`✦ Interactive feedback through subtle glows on hover and color changes on selection helps users understand what’s clickable and what’s active. `];
+
+const outSolutions =[`✦ All applied filters are shown in the leftmost panel, aligning with natural left-to-right reading flow — users first understand the context, then see results, then interact.`,
+`✦ Output is shown in an “m of n” format, where m is the current result number and n is the total number of results.`,
+`✦ A clearly marked button on the right allows users to return to the input phase and generate a new result set without relying on the browser UI.`,
+`✦ The same vibrant theme from the input page is carried over, creating a seamless and visually engaging experience.`,
+`✦ Instead of blocking alerts, edge cases now trigger bright yellow popups — attention-grabbing, but non-disruptive.`];
+
+ function updateText(lol, arr){
+  container = document.getElementById(lol);
+  container.innerHTML ="";
+  arr.forEach(lolol => {
+   const msg = document.createElement("p");
+     msg.classList = 'body-text';
+  msg.innerText = lolol;
+  container.appendChild(msg);
+  });
+}
+  const oldInput = []
+ function changeImage(img_id, newSrc) {
+  const img = document.getElementById(img_id);
+
+  img.style.transition = 'opacity 0.3s';
+  img.style.opacity = 0;
+
+  // Create a temporary image to preload the new source
+  const temp = new Image();
+  temp.src = newSrc;
+
+  temp.onload = () => {
+    setTimeout(() => {
+      img.src = newSrc;
+      img.style.opacity = 1;
+    }, 200); // fade delay
+  };
+
+  // fallback in case image is cached and onload doesn't fire
+  setTimeout(() => {
+    img.src = newSrc;
+    img.style.opacity = 1;
+  }, 250);
+}
+  const activeStyle = {
+    padding: '8px 16px',
+    boxShadow: '0 0 8px #00baff, 0 0 16px #00baff',
+    backgroundColor: 'transparent',
+    borderRadius: '8px'
+  };
+
+  const resetStyle = {
+    padding: '',
+    boxShadow: '',
+    backgroundColor: '',
+    borderRadius: ''
+  };
+
+  toggle.addEventListener('change', () => {
+
+      
+    if (toggle.checked) {
+      // Output active
+      Object.assign(output.style, activeStyle);
+      Object.assign(input.style, resetStyle);
+      changeImage('streamscout-img',"streamscout_prev.png");
+   changeImage('sukito-img',"sukito_prev.png");
+   updateText('problems',outProblems);
+   updateText('solutions',outSolutions);
+      
+  
+      
+    } else {
+      // Input active
+      Object.assign(input.style, activeStyle);
+      Object.assign(output.style, resetStyle);
+         changeImage('streamscout-img',"streamscout_in.png");
+   changeImage('sukito-img',"sukito_in.png");
+      updateText('problems',inProblems);
+   updateText('solutions',inSolutions);
+    }
+  });
+
+const oldPrev = document.getElementById('old-prev');
+const oldNext = document.getElementById('old-next');
+const oldDesc = document.getElementById('old-desc');
+const newPrev = document.getElementById('new-prev');
+
+oldPrev.addEventListener('click', () => {
+  oldPrev.style.display = 'none';
+  oldPrev.style.opacity = 0;
+  oldNext.style.display = 'block';
+  oldNext.style.opacity = 1;
+  changeImage('old-image','streamscout_in.png');
+   oldDesc.style.opacity = 0;
+  oldDesc.textContent = "Streamscout Input Page";
+  oldDesc.style.opacity = 1;
+});
+
+oldNext.addEventListener('click', () => {
+  oldNext.style.display = 'none';
+  oldNext.style.opacity = 0;
+  oldPrev.style.display = 'block';
+  oldPrev.style.opacity = 1;
+  changeImage('old-image','streamscout_out.png');
+    oldDesc.style.opacity = 0;
+  oldDesc.textContent = "Streamscout Output Page";
+  oldDesc.style.opacity = 1;
+});
+
+newPrev.addEventListener('click', () => {
+  newPrev.style.display = 'none';
+  newPrev.style.opacity = 0;
+  newNext.style.display = 'block';
+  newNext.style.opacity = 1;
+  changeImage('new-image','sukito_in.png');
+   newDesc.style.opacity = 0;
+  newDesc.textContent = "Sukito Input Page";
+  newDesc.style.opacity = 1;
+});
+
+newNext.addEventListener('click', () => {
+  newNext.style.display = 'none';
+  newNext.style.opacity = 0;
+  newPrev.style.display = 'block';
+  newPrev.style.opacity = 1;
+  changeImage('new-image','sukito_out.png');
+    newDesc.style.opacity = 0;
+  newDesc.textContent = "Sukito Output Page";
+  newDesc.style.opacity = 1;
+});
+
+   updateText('problems',inProblems);
+   updateText('solutions',inSolutions);
+
+
+  const openBtn = document.getElementById("about-link");
+  const modal = document.getElementById("about-modal");
+  const closeBtn = document.querySelector(".close-btn");
+
+   openBtn?.addEventListener('click', function (e) {
+    e.preventDefault();
+    modal.style.display = 'flex';
+    
+    // Wait a tiny bit so transition works
+    requestAnimationFrame(() => {
+      modal.classList.add('show');
+    });
+  });
+
+  closeBtn?.addEventListener('click', function () {
+    modal.classList.remove('show');
+    setTimeout(() => {
+      modal.style.display = 'none';
+    }, 300); // match transition duration
+  });
+
+  window.addEventListener('click', function (e) {
+    if (e.target === modal) {
+      modal.classList.remove('show');
+      setTimeout(() => {
+        modal.style.display = 'none';
+      }, 300);
+    }
+  });
+
+</script>
+</html>
